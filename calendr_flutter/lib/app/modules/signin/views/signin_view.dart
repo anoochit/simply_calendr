@@ -1,6 +1,8 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../../services/auth_service.dart';
+import '../../../routes/app_pages.dart';
 import '../controllers/signin_controller.dart';
 
 class SigninView extends GetView<SigninController> {
@@ -66,6 +68,8 @@ class SigninView extends GetView<SigninController> {
                             if (controller.fromKey.currentState!.validate()) {
                               //
                               log('signin');
+                              AuthService.to.login();
+                              Get.offAllNamed(Routes.DASHBOARD);
                             }
                           },
                           child: const Text('Sign In'),

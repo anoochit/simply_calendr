@@ -10,7 +10,7 @@ class RouteGuard extends GetMiddleware {
     if (AuthService.to.isLoggedInValue) {
       return null;
     } else {
-      return RouteSettings(name: Routes.SIGNIN);
+      return const RouteSettings(name: Routes.SIGNIN);
     }
   }
 }

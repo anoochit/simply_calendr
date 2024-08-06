@@ -23,36 +23,37 @@ class AppPages {
 
   static final routes = [
     GetPage(
-        name: _Paths.HOME,
-        page: () => const HomeView(),
-        binding: HomeBinding(),
-        children: [
-          GetPage(
-            name: _Paths.SIGNIN,
-            page: () => const SigninView(),
-            binding: SigninBinding(),
-          ),
-          GetPage(
-            name: _Paths.DASHBOARD,
-            page: () => const DashboardView(),
-            binding: DashboardBinding(),
-            middlewares: [
-              RouteGuard(),
-            ],
-          ),
-          GetPage(
-            name: _Paths.CALENDAR,
-            page: () => const CalendarView(),
-            binding: CalendarBinding(),
-            middlewares: [
-              RouteGuard(),
-            ],
-          ),
-        ]),
-    GetPage(
-      name: _Paths.SIGNUP,
-      page: () => const SignupView(),
-      binding: SignupBinding(),
+      name: _Paths.HOME,
+      page: () => const HomeView(),
+      binding: HomeBinding(),
+      children: [
+        GetPage(
+          name: _Paths.SIGNIN,
+          page: () => const SigninView(),
+          binding: SigninBinding(),
+        ),
+        GetPage(
+          name: _Paths.DASHBOARD,
+          page: () => const DashboardView(),
+          binding: DashboardBinding(),
+          middlewares: [
+            RouteGuard(),
+          ],
+        ),
+        GetPage(
+          name: _Paths.CALENDAR,
+          page: () => const CalendarView(),
+          binding: CalendarBinding(),
+          middlewares: [
+            RouteGuard(),
+          ],
+        ),
+        GetPage(
+          name: _Paths.SIGNUP,
+          page: () => const SignupView(),
+          binding: SignupBinding(),
+        ),
+      ],
     ),
   ];
 }
